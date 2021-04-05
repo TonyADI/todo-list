@@ -1,0 +1,17 @@
+.task-container{
+    background-color: rgb(236, 236, 236);
+}
+
+.task{
+    padding-left: 10px;
+    display: inline-block;
+    width: 90%;
+}
+
+.remove:hover{
+    cursor: pointer;
+}
+
+.remove-button{
+  background-color: #dc3545;
+}
