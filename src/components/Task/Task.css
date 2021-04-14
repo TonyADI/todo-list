@@ -1,11 +1,12 @@
 .task-container{
+    overflow: hidden;
     background-color: rgb(236, 236, 236);
 }
 
 .task{
     padding-left: 10px;
     display: inline-block;
-    width: 90%;
+    width: 80%;
 }
 
 .remove:hover{

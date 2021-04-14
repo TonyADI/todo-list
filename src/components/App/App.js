@@ -38,9 +38,9 @@ const App = () => {
       <div className="App-body">
       <h1>Todo List</h1>
       <div>
-        <div className="container tasklist">
+        <div className="container" id="input-container">
           <input type='text' placeholder='Enter Task' value={task} 
-          onKeyPress={handleKeyPress} onChange={handleChange} className="input-container"/>
+          onKeyPress={handleKeyPress} onChange={handleChange} className="input"/>
           <button onClick={handleClick} className="add-button button"><i className ="fa fa-plus icon"></i></button>
         </div>
         <div><Tasklist tasks={tasks} onClick={deleteTask}/></div>

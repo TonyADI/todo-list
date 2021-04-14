@@ -1,6 +1,7 @@
 .App-body {
   text-align: center;
   border: 1px solid lightgrey;
+  box-shadow: 1px 1px 5px #ddd;
   width: 40%;
   font-size: 20px;
   margin: 50px auto;
@@ -9,12 +10,22 @@
   padding-bottom: 40px;
 }
 
-.input-container, .input-container:focus{
+#input-container{
+  border: 0.5px solid #ccc;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px !important;
+}
+
+.input{
   border: 0px;
-  outline: 0px;
   font-size: 20px;
   padding-left: 10px;
   width: 80%;
+}
+
+.input:focus{
+  outline: none;
 }
 
 .add-button{
@@ -42,7 +53,6 @@
 
 
 .container{
-  border: 0.5px solid lightgrey;
   margin: 5px auto;
   border-radius: 2.5px;
   text-align: left;
