@@ -9,10 +9,15 @@ const App = () => {
   
   const handleClick = () => {
     if(task){
-      let newId = id + 1;
-      setTasks([...tasks, {id:newId, info: task}])
-      setId(newId);
-      setTask('')
+      if(tasks.every(taskObject => task !== taskObject.info)){
+        let newId = id + 1;
+        setTasks([...tasks, {id:newId, info: task}])
+        setId(newId);
+        setTask('')
+      }
+      else{
+        alert('Task already exists.')
+      }
     }
     else{
       alert('Error! Task cannot be empty.')

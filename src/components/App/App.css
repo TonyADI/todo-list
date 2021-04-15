@@ -9,6 +9,8 @@
   font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
   padding-bottom: 40px;
   color: #05101b;
+  max-height: 110vh;
+  overflow-y: scroll;
 }
 
 #input-container{
@@ -45,6 +47,7 @@
 
 .button:hover{
   cursor: pointer;
+  filter: brightness(90%);
 }
 
 .icon{
@@ -60,4 +63,9 @@
   padding: 20px 0px;
   font-size: 20px;
   position: relative;
+}
+
+.App-body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
