@@ -1,12 +1,17 @@
 .task-container{
     overflow: hidden;
     background-color: rgb(236, 236, 236);
+    margin: 5px auto;
+    border-radius: 2.5px;
+    text-align: left;
+    font-size: 20px;
+    position: relative;
 }
 
 .task{
-    padding-left: 10px;
     display: inline-block;
     width: 80%;
+    animation: flow-down 1s ease forwards;
 }
 
 .remove:hover{
@@ -15,4 +20,9 @@
 
 .remove-button{
   background-color: #dc3545;
+}
+
+@keyframes flow-down{
+    from {padding: 0px 0px 0px 10px;}
+    to {padding: 20px 0px 20px 10px;}
 }

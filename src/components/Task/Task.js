@@ -13,7 +13,7 @@ export class Task extends React.Component{
 
     render(){
         return (
-            <div className='task-container container'>
+            <div className='task-container'>
                 <div className='task'>{this.props.taskInfo}</div><button 
                 onClick={this.removeTask} className='button remove-button'><i className="
                 fa fa-trash icon"></i></button> 

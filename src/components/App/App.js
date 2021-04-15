@@ -12,6 +12,7 @@ const App = () => {
       let newId = id + 1;
       setTasks([...tasks, {id:newId, info: task}])
       setId(newId);
+      setTask('')
     }
     else{
       alert('Error! Task cannot be empty.')
@@ -41,10 +42,12 @@ const App = () => {
         <div className="container" id="input-container">
           <input type='text' placeholder='Enter Task' value={task} 
           onKeyPress={handleKeyPress} onChange={handleChange} className="input"/>
-          <button onClick={handleClick} className="add-button button"><i className ="fa fa-plus icon"></i></button>
+          <button onClick={handleClick} className="add-button button">
+            <i className ="fa fa-plus icon"></i></button>
         </div>
         <div><Tasklist tasks={tasks} onClick={deleteTask}/></div>
-        {tasks.length ? <div>{tasks.length} tasks left to complete</div> : <div>No Tasks to Complete</div>}
+        {tasks.length ? <div>{tasks.length} Task{tasks.length !== 1 ? 's' : ''} Left 
+        to Complete</div> : <div>No Tasks to Complete</div>}
       </div>
       </div>
     );
