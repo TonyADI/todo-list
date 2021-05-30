@@ -23,6 +23,6 @@
 }
 
 @keyframes flow-down{
-    from {padding: 0px 0px 0px 10px;}
-    to {padding: 20px 0px 20px 10px;}
+    from {padding: 0px 0px 0px 20px;}
+    to {padding: 20px 0px 20px 20px;}
 }
