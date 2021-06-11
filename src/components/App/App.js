@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import swal from 'sweetalert';
 import { Tasklist } from '../Tasklist/Tasklist';
 import './App.css';
 
@@ -16,11 +17,11 @@ const App = () => {
         setTask('')
       }
       else{
-        alert('Task already exists.')
+        swal('Task already exists.')
       }
     }
     else{
-      alert('Error! Task cannot be empty.')
+      swal('Error! Task cannot be empty.')
     }
   }
 
