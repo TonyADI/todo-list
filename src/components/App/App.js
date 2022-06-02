@@ -34,6 +34,11 @@ const App = () => {
       handleClick();
     }
   }
+  
+  const handleSubmit = e => {
+    handleClick();
+    e.preventDefault();
+  }
 
   const deleteTask = taskId => {
     console.log(taskId)
@@ -43,18 +48,29 @@ const App = () => {
 
   return (
       <div className="App-body">
-      <h1>Todo List</h1>
-      <div>
-        <div className="container" id="input-container">
-          <input type='text' placeholder='Enter Task' value={task} 
-          onKeyPress={handleKeyPress} onChange={handleChange} className="input"/>
-          <button onClick={handleClick} className="add-button button">
-            <i className ="fa fa-plus icon"></i></button>
+        <h1>Todo List</h1>
+        <div>
+          <div className="container" id="input-container">
+            <input 
+              type='text' 
+              placeholder='Enter Task' 
+              value={task} 
+              onKeyPress={handleKeyPress} 
+              onChange={handleChange} 
+              className="input"/>
+            <button onClick={handleClick} className="add-button button">
+              <i className ="fa fa-plus icon"></i>
+            </button>
+          </div>
+          <Tasklist 
+            tasks={tasks} 
+            onClick={deleteTask}/>
+          <div>
+            {tasks.length ? 
+                {tasks.length} Task{tasks.length !== 1 && 's'} Left to Complete : 
+                No Tasks to Complete}
+          </div>
         </div>
-        <div><Tasklist tasks={tasks} onClick={deleteTask}/></div>
-        {tasks.length ? <div>{tasks.length} Task{tasks.length !== 1 ? 's' : ''} Left 
-        to Complete</div> : <div>No Tasks to Complete</div>}
-      </div>
       </div>
     );
 }
