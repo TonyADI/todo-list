@@ -64,7 +64,7 @@ const App = () => {
           </div>
           <Tasklist 
             tasks={tasks} 
-            onClick={deleteTask}/>
+            handleClick={deleteTask}/>
           <div>
             {tasks.length ? 
                 {tasks.length} Task{tasks.length !== 1 && 's'} Left to Complete : 
