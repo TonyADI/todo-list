@@ -1,16 +1,21 @@
-import React from 'react'
-import { Task } from '../Task/Task'
-import './Tasklist.css'
+import { Task } from '../Task/Task';
+import './Tasklist.css';
 
-export class Tasklist extends React.Component{
-    render(){
-        return(
-            <div>
-                <div className='tasklist'>
-                {this.props.tasks.map(task => {return <Task key={task.id} taskInfo={task.info} taskId={task.id} taskDone={task.done} 
-                onClick={this.props.onClick}/> })}
-                </div>
+export const Tasklist = ({tasks, handleClick}) => {
+    return(
+        <div>
+            <div className='tasklist'>
+                {tasks ? 
+                        tasks.map(task => 
+                            <Task 
+                                key={task.id} 
+                                info={task.info} 
+                                id={task.id} 
+                                done={task.done} 
+                                handleClick={handleClick}/>}) : 
+                        'No tasks to display'
+                    }
             </div>
-        )
-    }
+        </div>
+    )
 }
